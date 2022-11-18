@@ -1,0 +1,4 @@
+name: Addon
+version: '${project.version}'
+main: de.mipa.addon.Addon
+api-version: 1.18
