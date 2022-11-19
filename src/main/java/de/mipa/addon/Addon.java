@@ -1,6 +1,7 @@
 package de.mipa.addon;
 
 import de.mipa.addon.commands.HelpC;
+import de.mipa.addon.commands.gmC;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
@@ -13,19 +14,21 @@ public final class Addon extends JavaPlugin {
         getCommand("hilfe").setExecutor(new HelpC());
         getCommand("help").setExecutor(new HelpC());
         getCommand("?").setExecutor(new HelpC());
+        getCommand("gm").setExecutor(new gmC());
 
         ConsoleCommandSender console = Bukkit.getConsoleSender();
         console.sendMessage(ChatColor.DARK_GREEN + "Addon erfolgreich geladen!");
 
 
-
     }
+
+
 
     @Override
     public void onDisable() {
 
         ConsoleCommandSender console = Bukkit.getConsoleSender();
-        console.sendMessage(ChatColor.DARK_RED + "Lobbysystem erfolgreich gestoppt!");
+        console.sendMessage(ChatColor.DARK_RED + "Addon erfolgreich gestoppt!");
 
 
     }

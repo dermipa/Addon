@@ -6,3 +6,5 @@ commands:
   hilfe:
   help:
   "?":
+  gm:
+      description: wechsle in die verschiedenen Spielmodi
