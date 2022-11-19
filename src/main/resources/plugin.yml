@@ -6,5 +6,3 @@ commands:
   hilfe:
   help:
   "?":
-  bukkit:help:
-  bukkit:?:
