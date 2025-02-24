@@ -1,0 +1,31 @@
+name: Addon
+version: '${project.version}'
+main: de.mipa.addon.Main
+author: Mipa
+api-version: 1.16
+commands:
+  shop:
+    aliases: Zeigt dir unseren Shop
+  gm:
+    description: Es verändert deinen Gamemode
+    aliases:
+      - gamemode
+    permission: addon.gm
+  hilfe:
+    permission: addon.hilfe
+    aliases:
+      - help
+      - ?
+permissions:
+  addon.prefix.admin:
+    description: Gibt den Admin-Prefix
+    default: false
+  addon.prefix.dev:
+      description: Gibt den Dev-Prefix
+      default: false
+  addon.prefix.mod:
+    description: Gibt den Mod-Prefix
+    default: false
+  addon.prefix.spieler:
+    description: Gibt den Spieler-Prefix
+    default: true
