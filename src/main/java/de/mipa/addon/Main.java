@@ -19,6 +19,7 @@ public class Main extends JavaPlugin {
         instance = this;
         getLogger().info(ChatColor.GREEN + "Addon wurde aktiviert!");
 
+
         getCommand("gm").setExecutor(new GmCommand());
         getCommand("shop").setExecutor(new ShopCommand());
         getCommand("hilfe").setExecutor(new HelpCommand());
