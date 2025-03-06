@@ -19,17 +19,18 @@ public class Main extends JavaPlugin {
         instance = this;
         getLogger().info(ChatColor.GREEN + "Addon wurde aktiviert!");
 
+        saveDefaultConfig();
 
-        getCommand("gm").setExecutor(new GmCommand());
-        getCommand("shop").setExecutor(new ShopCommand());
-        getCommand("hilfe").setExecutor(new HelpCommand());
+        getCommand("gm").setExecutor(new GmCommand(this));
+        getCommand("shop").setExecutor(new ShopCommand(this));
+        getCommand("help").setExecutor(new HelpCommand(this));
 
 
         getServer().getPluginManager().registerEvents(new CommandBlocker(), this);
         getServer().getPluginManager().registerEvents(new JoinLeaveHandler(), this);
         getServer().getPluginManager().registerEvents(new ChatListener(), this);
         getServer().getPluginManager().registerEvents(new JoinListener(), this);
-    }
+        }
 
     @Override
     public void onDisable() {

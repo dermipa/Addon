@@ -28,12 +28,18 @@ public class JoinListener implements Listener {
 
 
         // Prefix basierend auf Permission setzen
-        if (player.hasPermission("addon.prefix.admin")) {
+        if (player.hasPermission("addon.prefix.owner")) {
+            team.setPrefix(ChatColor.DARK_RED + "[Owner] ");
+        } else if (player.hasPermission("addon.prefix.admin")) {
             team.setPrefix(ChatColor.RED + "[Admin] ");
-        } else if (player.hasPermission("addon.prefix.mod")) {
-            team.setPrefix(ChatColor.BLUE + "[Mod] ");
         } else if (player.hasPermission("addon.prefix.dev")) {
             team.setPrefix(ChatColor.AQUA + "[Dev] ");
+        } else if (player.hasPermission("addon.prefix.mod")) {
+            team.setPrefix(ChatColor.GREEN + "[Moderator] ");
+        } else if (player.hasPermission("addon.prefix.sup")) {
+            team.setPrefix(ChatColor.BLUE + "[Supporter] ");
+        } else if (player.hasPermission("addon.prefix.premium")) {
+            team.setPrefix(ChatColor.GOLD + "[Premium] ");
         } else {
             team.setPrefix(ChatColor.GRAY + "[Spieler] ");
         }

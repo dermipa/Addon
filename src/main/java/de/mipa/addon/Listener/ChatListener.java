@@ -18,12 +18,18 @@ public class ChatListener implements Listener {
     }
 
     private String getPrefix(Player player) {
-        if (player.hasPermission("addon.prefix.admin")) {
+        if (player.hasPermission("addon.prefix.owner")) {
+            return ChatColor.DARK_RED + "[Owner] ";
+        } else if (player.hasPermission("addon.prefix.admin")) {
             return ChatColor.RED + "[Admin] ";
-        } else if (player.hasPermission("addon.prefix.mod")) {
-            return ChatColor.BLUE + "[Mod] ";
         } else if (player.hasPermission("addon.prefix.dev")) {
             return ChatColor.AQUA + "[Dev] ";
+        } else if (player.hasPermission("addon.prefix.mod")) {
+            return ChatColor.GREEN + "[Mod] ";
+        } else if (player.hasPermission("addon.prefix.sup")) {
+            return ChatColor.BLUE + "[Sup] ";
+        } else if (player.hasPermission("addon.prefix.premium")) {
+            return ChatColor.GOLD + "[Prem] ";
         } else {
             return ChatColor.GRAY + "[Spieler] ";
         }

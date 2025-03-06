@@ -1,0 +1,14 @@
+# config.yml
+
+gm-messages:
+  no-player: "§cDu musst ein Spieler sein, um diesen Befehl zu nutzen!"
+  usage: "§cNutze: /gm <0|1|2|3>"
+  survival: "§aSpielmodus gewechselt zu:§b Survival"
+  creative: "§aSpielmodus gewechselt zu:§b Kreativ"
+  adventure: "§aSpielmodus gewechselt zu:§b Abenteuer"
+  spectator: "§aSpielmodus gewechselt zu:§b Zuschauer"
+
+
+help-message: "§aWenn du Hilfe brauchst, erstelle ein ticket auf unserem Discord! - /discord"
+
+shop-message: "§9Besuche unseren Shop auf https://shop.klicksnow.de"
