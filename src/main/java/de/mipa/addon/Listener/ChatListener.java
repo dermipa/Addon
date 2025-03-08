@@ -25,11 +25,13 @@ public class ChatListener implements Listener {
         } else if (player.hasPermission("addon.prefix.dev")) {
             return ChatColor.AQUA + "[Dev] ";
         } else if (player.hasPermission("addon.prefix.mod")) {
-            return ChatColor.GREEN + "[Mod] ";
+            return ChatColor.GREEN + "[Moderator] ";
         } else if (player.hasPermission("addon.prefix.sup")) {
-            return ChatColor.BLUE + "[Sup] ";
+            return ChatColor.BLUE + "[Supporter] ";
+        } else if (player.hasPermission("addon.prefix.freund")) {
+            return ChatColor.DARK_PURPLE + "[Freund] ";
         } else if (player.hasPermission("addon.prefix.premium")) {
-            return ChatColor.GOLD + "[Prem] ";
+            return ChatColor.GOLD + "[Premium] ";
         } else {
             return ChatColor.GRAY + "[Spieler] ";
         }

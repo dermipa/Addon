@@ -36,6 +36,8 @@ public class JoinListener implements Listener {
             team.setPrefix(ChatColor.AQUA + "[Dev] ");
         } else if (player.hasPermission("addon.prefix.mod")) {
             team.setPrefix(ChatColor.GREEN + "[Moderator] ");
+        } else if (player.hasPermission("addon.prefix.freund")) {
+            team.setPrefix(ChatColor.DARK_PURPLE + "[Freund] ");
         } else if (player.hasPermission("addon.prefix.sup")) {
             team.setPrefix(ChatColor.BLUE + "[Supporter] ");
         } else if (player.hasPermission("addon.prefix.premium")) {

@@ -29,6 +29,9 @@ permissions:
   addon.prefix.mod:
     description: Gibt den Mod-Prefix
     default: false
+    addon.prefix.freund:
+      description: Gibt den Freunde-Prefix
+      default: false
     addon.prefix.sup:
       description: Gibt den Supporter-Prefix
       default: false
